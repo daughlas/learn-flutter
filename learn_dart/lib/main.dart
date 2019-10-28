@@ -61,5 +61,19 @@ class _MyHomePageState extends State<MyHomePage> {
     Logger log1 = Logger();
     Logger log2 = Logger();
     print('log1=log2: ${log1 == log2}');
+    
+    Student.doPrint('__leaning oop____');
+
+    Student stu1 = Student('东北大学', 'ljw', 30);
+    print('改变之前${stu1.school}');
+    stu1.school = "东北师范大学";
+    print('改变之后${stu1.school}');
+
+    print(stu1.toString());
+
+    Student stu2 = Student('吉林大学', '吕嘉文', 20, country: '中国', city: '杭州');
+
+    print(stu2.toString());
+
   }
 }

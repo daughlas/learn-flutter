@@ -32,6 +32,23 @@ class Student extends Person {
     print('构造方法体不是必须的');
   }
 
+  @override
+  String toString() {
+    return 'name:$name,age: $age, school:${this._school}, city: $city, country: $country, ${super.toString()}';
+  }
+
+  String get school => _school;
+
+  set school(String value) {
+    _school = value;
+  }
+
+  // 静态方法
+  static doPrint(String str) {
+    print('doPrint:${str}');
+  }
+
+
   // 命名构造方法
   // 使用命名构造方法为实现类的多个构造方法
   Student.cover(Student stu): super(stu.name, stu.age){

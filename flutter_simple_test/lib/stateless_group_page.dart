@@ -14,7 +14,15 @@ class StateLessGroupPage extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(title: Text('StatelessWidget 与基础组件')),
+        appBar: AppBar(
+          title: Text('StatelessWidget 与基础组件'),
+          leading: GestureDetector(
+            child: Icon(Icons.arrow_back),
+            onTap: () {
+              Navigator.pop(context);
+            }
+          ),
+        ),
         body: Container(
           decoration: BoxDecoration(color: Colors.white),
           alignment: Alignment.center,
